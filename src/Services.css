@@ -1,0 +1,50 @@
+/* Services.css */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 40px 20px;
+  max-width: 700px; /* Optional: Set a maximum width for better readability */
+  margin: auto; /* Center the container */
+  margin-top: 50px;
+  border-radius: 10px; /* Rounded corners for the container */
+  background-color: whitesmoke;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Space between form elements */
+  width: 100%; /* Full width for form elements */
+}
+
+label {
+  display: block; /* Make label block level */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%; /* Full width for input fields */
+  padding: 10px; /* Padding for comfort */
+  border: 1px solid #ccc; /* Border for styling */
+  border-radius: 4px; /* Rounded corners */
+}
+
+button {
+  padding: 10px 15px; /* Button padding */
+  background-color: #28a745; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+h1 {
+  font-size: 4em; /* Set the text size for h1 */
+}

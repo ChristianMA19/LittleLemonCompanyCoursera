@@ -1,0 +1,25 @@
+/* About.css */
+.about-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  text-align: center; /* Center text inside the container */
+}
+
+.about-text {
+  max-width: 1200px; /* Optional: limit width for better readability */
+  padding: 20px; /* Optional: add padding for spacing */
+}
+
+h1 {
+  font-size: 90px; /* Set h1 text size to 180px */
+}
+
+p {
+  font-size: 30px; /* Set paragraph text size to 24px */
+}

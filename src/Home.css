@@ -1,0 +1,22 @@
+/* Home.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("./assets/image.png");
+}
+.home-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center content vertically in the remaining space */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.home-text {
+  font-size: 72px; /* Set font size to 72px */
+  text-align: center; /* Center the text */
+}
