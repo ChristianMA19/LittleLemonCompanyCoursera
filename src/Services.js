@@ -1,4 +1,3 @@
-// Services.js
 import React, { useState } from "react";
 import "./Services.css";
 import Nav from "./Nav";
@@ -8,10 +7,41 @@ const Services = () => {
   const [time, setTime] = useState("");
   const [numDiners, setNumDiners] = useState(1);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission logic here
-    console.log(`Date: ${date}, Time: ${time}, Number of Diners: ${numDiners}`);
+
+    // Combine date and time into a single datetime string
+    const datetime = `${date}T${time}`;
+
+    // Prepare the data to send
+    const data = {
+      datetime: datetime,
+      numberPeoples: numDiners,
+    };
+
+    try {
+      const response = await fetch("https://retoolapi.dev/z32E66/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      console.log("Success:", result);
+      setDate("");
+      setTime("");
+      setNumDiners(1);
+      // Handle success (e.g., show a confirmation message)
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (e.g., show an error message)
+    }
   };
 
   return (
